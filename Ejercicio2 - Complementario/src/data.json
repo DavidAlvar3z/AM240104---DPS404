@@ -1,0 +1,7 @@
+[   
+    { "name": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png", "description": "Lenguaje de programación interpretado, basado en prototipos. Usado en desarrollo web y aplicaciones móviles." },
+    { "name": "Python", "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", "description": "Lenguaje de alto nivel, fácil de aprender y ampliamente usado en ciencia de datos e inteligencia artificial." },
+    { "name": "Java", "image": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg", "description": "Lenguaje orientado a objetos utilizado en aplicaciones empresariales y desarrollo de Android." },
+    { "name": "C++", "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg", "description": "Lenguaje de alto rendimiento utilizado en desarrollo de videojuegos y sistemas embebidos." },
+    { "name": "Ruby", "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg", "description": "Lenguaje dinámico y orientado a objetos popular en desarrollo web con Ruby on Rails." }
+]
