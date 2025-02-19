@@ -1,0 +1,285 @@
+/* =========================== */
+/*       Reset & Basics        */
+/* =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+/* =========================== */
+/*         Contenedor          */
+/* =========================== */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+/* =========================== */
+/*           Tabs              */
+/* =========================== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background: #334155;
+  color: #f1f5f9;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  background: #475569;
+}
+
+.tab-button.active {
+  background: #facc15;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+/* =========================== */
+/*      Contenido Wrapper      */
+/* =========================== */
+.content-wrapper {
+  padding: 20px;
+  border-top: 2px solid #334155;
+}
+
+.animated-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================== */
+/*         Planetas            */
+/* =========================== */
+.planetas-container {
+  margin: 20px 0;
+}
+
+.planetas-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #facc15;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px;
+  justify-content: center;
+}
+
+.planet-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.planet-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.6);
+  border: 3px solid #facc15;
+}
+
+/* Información del planeta */
+.planet-info {
+  margin-top: 20px;
+  background: #334155;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.planet-info h3 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  color: #facc15;
+}
+
+/* Tabs internas */
+.tabs-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-info {
+  background: #475569;
+  color: #f1f5f9;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tab-info:hover {
+  background: #64748b;
+}
+
+.tab-info.active {
+  background: #facc15;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 10px;
+  font-size: 1rem;
+  background: #1e293b;
+  border-radius: 6px;
+}
+
+/* =========================== */
+/*          Ventas             */
+/* =========================== */
+.ventas-container {
+  margin: 20px 0;
+}
+
+.ventas-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #facc15;
+}
+
+.ventas-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ventas-controls label {
+  font-size: 1rem;
+}
+
+.year-selector {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #475569;
+  color: #f1f5f9;
+  transition: background 0.3s ease;
+}
+
+.year-selector:hover {
+  background: #64748b;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.4);
+}
+
+/* =========================== */
+/*         Utilidades          */
+/* =========================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+/* =========================== */
+/*         Animaciones         */
+/* =========================== */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(250, 204, 21, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 20px rgba(250, 204, 21, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(250, 204, 21, 0); }
+}
+
+.planet-image:hover {
+  animation: pulse 1s infinite;
+}
+
+/* =========================== */
+/*       Estilos Extras        */
+/* =========================== */
+.footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .planet-image {
+    width: 100px;
+    height: 100px;
+  }
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .planet-image {
+    width: 80px;
+    height: 80px;
+  }
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ventas-controls {
+    flex-direction: column;
+  }
+}
