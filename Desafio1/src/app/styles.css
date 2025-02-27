@@ -1,0 +1,277 @@
+/* src/app/styles.css */
+
+/* ================================
+   RESET Y CONFIGURACIÓN GLOBAL
+=================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  color: #343a40;
+  padding-top: 70px;
+  scroll-behavior: smooth;
+  transition: background 0.4s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ================================
+   NAVBAR
+=================================== */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ccc !important;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00c6ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.active-link {
+  color: #007bff !important;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+/* ================================
+   BIENVENIDA
+=================================== */
+.welcome-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.welcome-container h1 {
+  color: #007bff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+/* ================================
+   CARDS MODERNAS
+=================================== */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.card-title {
+  color: #343a40;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ================================
+   BOTONES
+=================================== */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* ================================
+   MODAL CON GLASSMORPHISM
+=================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUp 0.5s ease;
+  transform-origin: bottom;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+  color: #00c6ff;
+}
+
+/* ================================
+   MEDIA QUERIES
+=================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* ================================
+   ANIMACIONES
+=================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
